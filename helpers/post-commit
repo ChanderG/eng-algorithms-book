@@ -1,0 +1,13 @@
+#! /bin/bash
+# prepare gh-pages branch automatically
+
+git checkout gh-pages
+
+# update this list as and when required
+git add -f index.html
+git add -f main.html
+git add -f resources.html
+
+git commit -m"update gh-pages"
+
+git checkout master
