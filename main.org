@@ -1,4 +1,5 @@
 #+TITLE: Engineering Algorithms
+#+SETUPFILE: theme/theme-readtheorg.setup
 ** About
    This book or more specifically guide is focussed on an *enginneering* approach to
    basic algorithms and data structures.

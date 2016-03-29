@@ -1,3 +1,4 @@
+#+SETUPFILE: theme/theme-readtheorg.setup
 * Resources
 ** R1: CLRS Book
    Considered the most important book in algorithms.
