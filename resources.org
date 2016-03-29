@@ -1,0 +1,6 @@
+* Resources
+** R1: CLRS Book
+   Considered the most important book in algorithms.
+   I find it too mathematical/theoretical/low level
+** R2: Steven Skiena, The Algorithm Design Manual
+   A more practical, high level approach.
