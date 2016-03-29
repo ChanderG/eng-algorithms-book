@@ -1,5 +1,6 @@
 #+TITLE: Engineering Algorithms
 #+SETUPFILE: theme/theme-readtheorg.setup
+#+OPTIONS: H:3
 ** About
    This book or more specifically guide is focussed on an *enginneering* approach to
    basic algorithms and data structures.
@@ -24,17 +25,33 @@
 *** Resources
     One off resources are linked inline.
     Important/recurring resources are listed [[file:resources.org][here]].
+-----
 ** Introduction: Order Notation
-*** Goals
-    To understand the Order notation.
-    To setup a framework for timing implementations and comparing them.
-*** Reading
-    Read the corresponding chapter R2(most ideal introduction).
+*** Order Notation
+**** Goals
+     + To understand the Order notation.
+     + To setup a framework for timing implementations and comparing them.
+**** Reading
+     Read the corresponding chapter R2(most ideal introduction).
 
-    Go through the wiki page: https://en.wikipedia.org/wiki/Big_O_notation
-    Look at the corresponding sections in R1 ( math heavy ).
+     Go through the wiki page: https://en.wikipedia.org/wiki/Big_O_notation.
+     Look at the corresponding sections in R1 ( math heavy ).
 
-    Search terms: asymptotic notation, growth rates etc.
-*** Doing
-    Learn to time programs. 
+     Search terms: asymptotic notation, growth rates etc.
+**** Doing
+     Learn to time programs. We can look at 2 approaches.
+     - *Langauge Agnostic* ::
+        The unix command ~time~ can be used to time commands externally.
+     - *Language Specific* ::
+        Some languages have easy to use in-built timing functions. 
+        For example, python has it's ~timeit~ module. Look at: 
+        https://docs.python.org/2/library/timeit.html
+
+    Now try some simple tests of timing.
+    + Compare time taken between 2 different orders (like O(n^2) and O(n^3))
+      You can use nested for loops with some dummy operation inside.
+    + Try varying n and see effect.
+    + Try varying the operation inside and see the effect.
+
+    Look at E2.1
 ** Sorting

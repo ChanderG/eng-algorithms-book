@@ -1,3 +1,5 @@
 *.html
 *~
 *#
+*.org_archive
+*.swp
