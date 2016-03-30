@@ -3,9 +3,17 @@
 
 git checkout gh-pages
 
+# get the org files from master
+git checkout master -- index.org main.org resources.org
+
+# publish
+emacs --script helpers/export.el
+
 # update this list as and when required
 git add -f index.html
 git add -f main.html
 git add -f resources.html
 
 git commit -m"update gh-pages"
+
+git checkout master
