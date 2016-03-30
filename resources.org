@@ -5,3 +5,7 @@
    I find it too mathematical/theoretical/low level
 ** R2: Steven Skiena, The Algorithm Design Manual
    A more practical, high level approach.
+** R3: C++ Reference
+   http://www.cplusplus.com/reference
+   Full manual for C++ standard libraries.
+   Each function/method has examples too. Highly recommended.

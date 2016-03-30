@@ -37,7 +37,7 @@
      Go through the wiki page: https://en.wikipedia.org/wiki/Big_O_notation.
      Look at the corresponding sections in R1 ( math heavy ).
 
-     Search terms: asymptotic notation, growth rates etc.
+     Search terms: time complexity, asymptotic notation, growth rates etc.
 **** Doing
      Learn to time programs. We can look at 2 approaches.
      - *Langauge Agnostic* ::
@@ -54,4 +54,42 @@
     + Try varying the operation inside and see the effect.
 
     Look at E2.1
+*** Basic structures: Arrays and Lists
+**** Goals
+     + Understanding arrays and lists
+     + Understand the differences between them
+     + Looking at the standard implementations
+
+**** Reading
+     Read the corresponding section (at the start of the chapter on Data Structures) in R2.
+
+     Read the wikipedia article: https://en.wikipedia.org/wiki/Array_data_structure
+     A SO answer on the differences:
+     http://stackoverflow.com/questions/166884/array-versus-linked-list
+
+     Search terms: arrays, linked lists, lists
+
+**** Doing
+     Implementing from scratch and using in-built implementations.
+
+     Do:
+     + Investigate arrays in C/C++
+     + Create linked lists in C (using node and pointer structure)
+     + Investigate lists in Python
+
+     By "investigate", I mean implement examples, find out time complexity for 
+     common operations (inserting new elements, deleting elements, updating 
+     reading, copying ), time performance between the different versions.
+
+     Now look at the in-built implementations in C++. These are part of the
+     STL (Standard Template Library) that comes bundled with C++.
+
+     + Investigate ~vector~ in C++
+     + Investigate ~list~ in C++
+
+     For this look up corresponding pages in R3.
+     These 2 are the important ones; you will be using them again and again.
+     Also look at: ~array~, ~forward_list~ and the other containers from STL,
+     though these are not as widely used.
+
 ** Sorting
