@@ -22,6 +22,24 @@
 
    This way the reader can get an appreciation of the differences in the levels of the
    language.
+*** Organization
+    Each section has 3 subsections:
+    + Goal ::
+	     The lesson goals/aims
+    + Reading ::
+		Reading recommendations left to the reader. This is the *Science* part.
+		These are typically links, sections from the linked resources.
+		There are 2 paragraphs in this subsection. The first is the primary 
+		recommendation (meaning required/important), the second is auxiallary
+		reading material.
+    + Doing ::
+	      This is the *Engineering* part. Ideas/tasks, sometimes broad, sometimes 
+	      specific are listed here. It is recommended that the reader does these
+	      fully.
+
+	      Sometimes, examples (related to or partial solutions to the tasks) are 
+	      mentioned here.
+
 *** Resources
     One off resources are linked inline.
     Important/recurring resources are listed [[file:resources.org][here]].
@@ -54,6 +72,7 @@
     + Try varying the operation inside and see the effect.
 
     Look at E2.1
+-----
 *** Basic structures: Arrays and Lists
 **** Goals
      + Understanding arrays and lists
@@ -91,5 +110,30 @@
      These 2 are the important ones; you will be using them again and again.
      Also look at: ~array~, ~forward_list~ and the other containers from STL,
      though these are not as widely used.
+-----
+*** Basic structures: Dict
+**** Goals
+     + Understand a dict/map
+     + Role of a Dict in Python
+**** Reading
+     This is a data structure covered very little in standard approaches.
+     They touch upon the concept as Hash Tables, but it is used in few algorithms.
 
+     https://en.wikipedia.org/wiki/Associative_array
+
+     Look at the relevent sections in R2, R1.
+
+     Search terms: associative arrays, dict, dictionary, maps, hash tables
+**** Doing
+     Now this is kind of langauge specfic.
+
+     We have ~map~, ~unordered_map~ in C++. 
+     + Investigate these. 
+     These are not widely used, but knowing them will be helpful.
+
+     In Python, we have ~dict~ which is a completely different story. 
+     It is one of the most used (even /overused/) features in general.
+     + Investigate this.
+     You will be frequently using ~dict~s as long as you use Python.
+-----
 ** Sorting
