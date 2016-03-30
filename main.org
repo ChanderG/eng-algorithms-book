@@ -127,8 +127,8 @@
 **** Doing
      Now this is kind of langauge specfic.
 
-     We have ~map~, ~unordered_map~ in C++. 
-     + Investigate these. 
+     We have ~map~, ~unordered_map~ in C++ as a part of the STL. 
+     + Investigate these. Use R3 as required.
      These are not widely used, but knowing them will be helpful.
 
      In Python, we have ~dict~ which is a completely different story. 
