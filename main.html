@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Engineering Algorithms</title>
-<!-- 2016-03-30 Wed 13:48 -->
+<!-- 2016-04-01 Fri 19:21 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="chanderg" />
@@ -152,6 +152,7 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#sec-1-1">1.1. Organization</a></li>
 <li><a href="#sec-1-2">1.2. Resources</a></li>
+<li><a href="#sec-1-3">1.3. Prerequisites</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2. Introduction: Order Notation</a>
@@ -179,7 +180,20 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Sorting</a></li>
+<li><a href="#sec-3">3. Searching</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Goals</a></li>
+<li><a href="#sec-3-2">3.2. Reading</a></li>
+<li><a href="#sec-3-3">3.3. Doing</a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1. In Python, try to build a lookup for installed modules</a></li>
+<li><a href="#sec-3-3-2">3.3.2. In Python, try to build a dictionary lookup</a></li>
+<li><a href="#sec-3-3-3">3.3.3. In C++, try the previous 2 tasks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Sorting</a></li>
 </ul>
 </div>
 </div>
@@ -257,7 +271,21 @@ Important/recurring resources are listed <a href="resources.html">here</a>.
 <hr  />
 </div>
 </div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Prerequisites</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+You need to be using a Linux distro.
+Basic familiarity with C, C++, Python.
+</p>
+
+<p>
+Someone who has done a first level programming course would be at the ideal level.
+</p>
 </div>
+</div>
+</div>
+
 <div id="outline-container-sec-2" class="outline-2">
 <h2 id="sec-2"><span class="section-number-2">2</span> Introduction: Order Notation</h2>
 <div class="outline-text-2" id="text-2">
@@ -480,12 +508,189 @@ You will be frequently using ~dict~s as long as you use Python.
 </div>
 </div>
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Sorting</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Searching</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+This may seem simple/trivial, but we will use this to learn some practical aspects: 
+namely data IO in Python/C++ and templates in C++. Both these concepts will be 
+useful as we move to more important algorithms.
+</p>
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Goals</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Understand linear and binary search.
+</li>
+<li>See the effects on medium to large data.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Reading</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+This is quite a simple topic.
+</p>
+
+<p>
+See the wikipedia articles on the 2 terms.
+<a href="http://stackoverflow.com/questions/700241/what-is-the-difference-between-linear-search-and-binary-search">http://stackoverflow.com/questions/700241/what-is-the-difference-between-linear-search-and-binary-search</a>
+</p>
+
+<p>
+Read the relevent section in R2.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Doing</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Linear search is straight-forward. Binary search requires that your sort
+your data first.
+</p>
+
+<p>
+Consult R3 first before using a search engine blindly for C++ functions.
+</p>
+
+<p>
+For these, use int/float as your data type. Make up entries of small size: 5-15 elements. 
+</p>
+<ul class="org-ul">
+<li>Implement simple linear search in C++. Try it using C style arrays or/and <code>vector</code>.
+</li>
+<li>Implement binary search in C++. Use <code>vector</code> and STL <code>sort</code> present in <code>&lt;algorithm&gt;</code>.
+</li>
+<li>Implement both in Python, using lists and <code>sort</code>.
+</li>
+<li>Compare performance between the C++/Python versions.
+</li>
+<li>Check corner cases in your implementations: empty array/list, item not present etc.
+</li>
+</ul>
+
+<p>
+Looking at inbuilt functions.
+</p>
+<ul class="org-ul">
+<li>Investigate <code>binary_search</code> in C++ STL <code>&lt;algorithm&gt;</code>.
+</li>
+</ul>
+
+<p>
+Now for the practical angle.
+</p>
+
+<p>
+To really understand the differences (for this and future algorithms), we need
+bigger and more realistic data.
+</p>
+</div>
+<div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> In Python, try to build a lookup for installed modules</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Python modules are installed in your system at <code>/usr/lib/python2.7/</code>.
+A command like: <code>ls -1 /usr/lib/python2.7/*.py</code> will get you all the modules.
+A check on my system shows around 200 or so files. This is a perfect input set
+for the search algorithms. Note that this data is already sorted for you.
+</p>
+
+<p>
+Either run the command in the shell, output to a file and <code>read</code> it in. 
+Or run the command as a <code>subprocess</code>.
+</p>
+
+<p>
+Check the timing difference between linear and binary search.
+</p>
+
+<p>
+Note that in python, the code you wrote above for int/floats can be used as is
+for strings. This is the concept of <b>dynamic typing</b>. C++, however is <b>static typed</b>
+and we have to re-write the code for strings.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> In Python, try to build a dictionary lookup</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+This is simillar to the previous task, but with more data.
+</p>
+
+<p>
+Unix systems have an inbuilt dictionary (only listing of words) of English inbuilt.
+Try: <code>cat /usr/share/dict/words</code>. A quick look shows around 99,000 words.
+</p>
+
+<p>
+Run the previous task on this input.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3"><span class="section-number-4">3.3.3</span> In C++, try the previous 2 tasks</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+Doing this in C++, offers the opportunity of learning some C++ concepts.
+</p>
+
+<p>
+The first is C++ <code>string</code>, different from the C strings. Get a clear understanding
+of the differences and learn to use the C++ version.
+</p>
+
+<p>
+Use, <code>ifstream</code> to read in the files. Running a process from within C++, involves 
+considerably more work, either by using the <code>system</code> command or by <code>fork</code> and <code>exec</code>,
+and then using a <code>pipe</code> or some other <i>inter process communication</i> technique, all 
+more off-topic and not really recommended at this juncture.
+</p>
+
+<p>
+Previously, you wrote the code for int/float. Now that is not directly transferable
+to strings. You need to physically re-write everything for strings. This brings us
+to the concept of <code>templates</code>.
+</p>
+
+<p>
+Templates are a very powerful C++ feature that most programming courses don't care
+about. 
+</p>
+
+<p>
+Read: 
+</p>
+<ul class="org-ul">
+<li><a href="http://www.programiz.com/cpp-programming/templates">http://www.programiz.com/cpp-programming/templates</a>
+</li>
+<li><a href="http://www.tenouk.com/Module24.html">http://www.tenouk.com/Module24.html</a>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Template_(C++)">https://en.wikipedia.org/wiki/Template_(C++)</a>
+</li>
+<li>Look at example E3.1
+</li>
+</ul>
+
+<p>
+Now try the previous 2 tasks.
+</p>
+<hr  />
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Sorting</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: chanderg</p>
-<p class="date">Created: 2016-03-30 Wed 13:48</p>
+<p class="date">Created: 2016-04-01 Fri 19:21</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
