@@ -4,3 +4,5 @@
 *.org_archive
 *.swp
 .#*
+
+*.out

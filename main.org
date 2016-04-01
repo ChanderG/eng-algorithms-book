@@ -44,6 +44,12 @@
     One off resources are linked inline.
     Important/recurring resources are listed [[file:resources.org][here]].
 -----
+*** Prerequisites
+    You need to be using a Linux distro.
+    Basic familiarity with C, C++, Python.
+
+    Someone who has done a first level programming course would be at the ideal level.
+
 ** Introduction: Order Notation
 *** Order Notation
 **** Goals
@@ -135,5 +141,86 @@
      It is one of the most used (even /overused/) features in general.
      + Investigate this.
      You will be frequently using ~dict~s as long as you use Python.
+-----
+** Searching
+   This may seem simple/trivial, but we will use this to learn some practical aspects: 
+   namely data IO in Python/C++ and templates in C++. Both these concepts will be 
+   useful as we move to more important algorithms.
+*** Goals
+    + Understand linear and binary search.
+    + See the effects on medium to large data.
+*** Reading
+    This is quite a simple topic.
+
+    See the wikipedia articles on the 2 terms.
+    http://stackoverflow.com/questions/700241/what-is-the-difference-between-linear-search-and-binary-search
+
+    Read the relevent section in R2.
+*** Doing
+    Linear search is straight-forward. Binary search requires that your sort
+    your data first.
+    
+    Consult R3 first before using a search engine blindly for C++ functions.
+
+    For these, use int/float as your data type. Make up entries of small size: 5-15 elements. 
+    + Implement simple linear search in C++. Try it using C style arrays or/and ~vector~.
+    + Implement binary search in C++. Use ~vector~ and STL ~sort~ present in ~<algorithm>~.
+    + Implement both in Python, using lists and ~sort~.
+    + Compare performance between the C++/Python versions.
+    + Check corner cases in your implementations: empty array/list, item not present etc.
+
+    Looking at inbuilt functions.
+    + Investigate ~binary_search~ in C++ STL ~<algorithm>~.
+
+    Now for the practical angle.
+
+    To really understand the differences (for this and future algorithms), we need
+    bigger and more realistic data.
+**** In Python, try to build a lookup for installed modules
+	 Python modules are installed in your system at ~/usr/lib/python2.7/~.
+	 A command like: ~ls -1 /usr/lib/python2.7/*.py~ will get you all the modules.
+	 A check on my system shows around 200 or so files. This is a perfect input set
+	 for the search algorithms. Note that this data is already sorted for you.
+
+	 Either run the command in the shell, output to a file and ~read~ it in. 
+	 Or run the command as a ~subprocess~.
+
+	 Check the timing difference between linear and binary search.
+
+	 Note that in python, the code you wrote above for int/floats can be used as is
+	 for strings. This is the concept of *dynamic typing*. C++, however is *static typed*
+	 and we have to re-write the code for strings.
+**** In Python, try to build a dictionary lookup
+	 This is simillar to the previous task, but with more data.
+
+	 Unix systems have an inbuilt dictionary (only listing of words) of English inbuilt.
+	 Try: ~cat /usr/share/dict/words~. A quick look shows around 99,000 words.
+
+	 Run the previous task on this input.
+**** In C++, try the previous 2 tasks
+	 Doing this in C++, offers the opportunity of learning some C++ concepts.
+
+	 The first is C++ ~string~, different from the C strings. Get a clear understanding
+	 of the differences and learn to use the C++ version.
+
+	 Use, ~ifstream~ to read in the files. Running a process from within C++, involves 
+	 considerably more work, either by using the ~system~ command or by ~fork~ and ~exec~,
+	 and then using a ~pipe~ or some other /inter process communication/ technique, all 
+	 more off-topic and not really recommended at this juncture.
+
+	 Previously, you wrote the code for int/float. Now that is not directly transferable
+	 to strings. You need to physically re-write everything for strings. This brings us
+	 to the concept of ~templates~.
+
+	 Templates are a very powerful C++ feature that most programming courses don't care
+	 about. 
+	 
+	 Read: 
+	 + http://www.programiz.com/cpp-programming/templates
+	 + http://www.tenouk.com/Module24.html
+	 + https://en.wikipedia.org/wiki/Template_(C%2B%2B)
+	 + Look at example E3.1
+
+	 Now try the previous 2 tasks.
 -----
 ** Sorting
